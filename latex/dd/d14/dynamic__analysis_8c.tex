@@ -1,0 +1,557 @@
+\hypertarget{dynamic__analysis_8c}{}\section{dynamic\+\_\+analysis.\+c File Reference}
+\label{dynamic__analysis_8c}\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+
+
+dynamic analysis  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+Include dependency graph for dynamic\+\_\+analysis.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{df/dc2/dynamic__analysis_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{dynamic__analysis_8c_a44c532972eac9a2be87f26f5f9a171a1}{station\+\_\+number} ()
+\begin{DoxyCompactList}\small\item\em for calculating the number of success S\+TA, and performance metrics \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{dynamic__analysis_8c_ab2cb8ab426f06c27553b10c73a4f795c}{sta} = 40
+\begin{DoxyCompactList}\small\item\em parameter definition \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a66220f2712ab879767e2b0b1f3e79c1d}{Lmax} = 5
+\begin{DoxyCompactList}\small\item\em retry limit \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a504e9c4516d3b4089e4a9ea17c2ef2fa}{Imax} = 34
+\begin{DoxyCompactList}\small\item\em Imax. \end{DoxyCompactList}\item 
+float \hyperlink{dynamic__analysis_8c_ae93883d7b7e696e378c6816f9f77b037}{T\+X\+OP} = 5.\+681
+\begin{DoxyCompactList}\small\item\em The length of T\+X\+OP. \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_aa1ce3a5eea7d7c9e58a5755bf12e0510}{Jmax}
+\begin{DoxyCompactList}\small\item\em maximum J \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a28b532b3cf29162409a495ecf16c4efd}{Jmin}
+\begin{DoxyCompactList}\small\item\em minimum J \end{DoxyCompactList}\item 
+float \hyperlink{dynamic__analysis_8c_ae5acbf81614d055ed8075397f98f9493}{a\+\_\+j\+\_\+i}
+\begin{DoxyCompactList}\small\item\em alpha\+\_\+j\+\_\+i \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a3d90133d3051fbc4816d02efd9566d8e}{R} = 15
+\begin{DoxyCompactList}\small\item\em RU. \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a2689c4b3931025b79053532a5f1b0a85}{K} = 10
+\begin{DoxyCompactList}\small\item\em reserved slots \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a1dfcb70b9229f2da17dd5922b87ecf2c}{delta} = 0
+\begin{DoxyCompactList}\small\item\em delta \end{DoxyCompactList}\item 
+float \hyperlink{dynamic__analysis_8c_a1a86abc0e3b72c599d11f8fca1fe029b}{Ri} \mbox{[}100\mbox{]}
+\begin{DoxyCompactList}\small\item\em number of R\+A-\/\+RU in ith slot \end{DoxyCompactList}\item 
+float \hyperlink{dynamic__analysis_8c_a28e79d928b8e2e20d0836b652f98ea46}{total\+\_\+\+Ri}
+\item 
+int \hyperlink{dynamic__analysis_8c_acb559820d9ca11295b4500f179ef6392}{i}
+\begin{DoxyCompactList}\small\item\em index of for loop \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_ab66ed8e0098c0a86b458672a55a9cca9}{k}
+\begin{DoxyCompactList}\small\item\em index of for loop \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}
+\begin{DoxyCompactList}\small\item\em index of for loop \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a742204794ea328ba293fe59cec79b990}{m}
+\begin{DoxyCompactList}\small\item\em index of for loop \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}
+\begin{DoxyCompactList}\small\item\em index of for loop \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a7bfb4915d0ef30a664c014be00bad1fe}{Nn}
+\item 
+int \hyperlink{dynamic__analysis_8c_a37d972ae0b47b9099e30983131d31916}{j}
+\item 
+int \hyperlink{dynamic__analysis_8c_a9dc38bd3fb41a39752550015ef4f512c}{Nn\+\_\+index}
+\item 
+int \hyperlink{dynamic__analysis_8c_aa4c2a5552e9bc49b1816ff532f558c74}{a}
+\item 
+float \hyperlink{dynamic__analysis_8c_aeeafe7e9eebbd2a45ce4fa2ae0d96c51}{sum}
+\begin{DoxyCompactList}\small\item\em temp for calculating Imax \end{DoxyCompactList}\item 
+float \hyperlink{dynamic__analysis_8c_a24d61a35b72d7299eb6b5f48e71a571b}{temp}
+\item 
+float \hyperlink{dynamic__analysis_8c_a5e005e112ca8edcc1d9b59fdfaefb7fd}{temp1}
+\item 
+double \hyperlink{dynamic__analysis_8c_a6770f4b277df418aa6ed32716aabc69b}{access\+\_\+delay}
+\begin{DoxyCompactList}\small\item\em for access delay \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a15c142af1b2266dbf4bcf5cf69516be1}{counter\+\_\+access\+\_\+delay}
+\begin{DoxyCompactList}\small\item\em for access delay \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a8390a777ee84b713b09fcbb5d2f47024}{Fm} \mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em for C\+DF \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_af1cb1a10f88721b26875206ca5f93b92}{total\+\_\+cdf}
+\begin{DoxyCompactList}\small\item\em for C\+DF \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a6f488533feeb78b1a439a47fafc6420b}{final\+\_\+cdf}
+\begin{DoxyCompactList}\small\item\em for C\+DF \end{DoxyCompactList}\item 
+int \hyperlink{dynamic__analysis_8c_a19c303b09c0b5fda03eba722a14650c1}{O\+CW} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em O\+C\+Wn. \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a345c2951b3e156ffc738e0de807642b4}{success\+\_\+sta}
+\begin{DoxyCompactList}\small\item\em for success S\+TA, packet \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_aa432b6257e899272f50f3ced74d4268e}{success\+\_\+packet}
+\begin{DoxyCompactList}\small\item\em for success packet \end{DoxyCompactList}\item 
+float \hyperlink{dynamic__analysis_8c_a3ebded876cc18042b8855cd4c27c00ae}{R\+A\+\_\+\+RU} = 15.\+0
+\begin{DoxyCompactList}\small\item\em R\+A-\/\+RU in first slot. \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a468749690692c0379578a882d18ae03f}{M} \mbox{[}100\mbox{]}
+\begin{DoxyCompactList}\small\item\em array for M \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_ae543cde0580d71ac9500d7b81128d3f2}{M\+\_\+i} \mbox{[}100\mbox{]}\mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em array for Mi \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a4bd37829ebbeaeb19ae8018f49a33ec9}{M\+\_\+i\+\_\+s} \mbox{[}100\mbox{]}\mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em array for Mis \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a0598245ad000ad15390cb80d45ea2252}{M\+\_\+i\+\_\+f} \mbox{[}100\mbox{]}\mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em array for Mif \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a49abb259b07d52a183751e5401ee8594}{M\+\_\+i\+\_\+s\+\_\+C} \mbox{[}100\mbox{]}
+\begin{DoxyCompactList}\small\item\em array for MisC \end{DoxyCompactList}\item 
+double \hyperlink{dynamic__analysis_8c_a621ed640a0caba2d42ecb9b7d376b3f0}{success\+\_\+probability}
+\begin{DoxyCompactList}\small\item\em access success probability \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+dynamic analysis 
+
+
+
+\subsection{Function Documentation}
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!main@{main}}
+\index{main@{main}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{dynamic__analysis_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{dynamic__analysis_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+References station\+\_\+number().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{dd/d14/dynamic__analysis_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!station\+\_\+number@{station\+\_\+number}}
+\index{station\+\_\+number@{station\+\_\+number}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{station\+\_\+number()}{station_number()}}]{\setlength{\rightskip}{0pt plus 5cm}int station\+\_\+number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{dynamic__analysis_8c_a44c532972eac9a2be87f26f5f9a171a1}{}\label{dynamic__analysis_8c_a44c532972eac9a2be87f26f5f9a171a1}
+
+
+for calculating the number of success S\+TA, and performance metrics 
+
+Ri = Ri-\/1 -\/ Mi-\/1,s + Mi-\/K,s
+
+Ri for delta
+
+min(2$\ast$\+O\+C\+W+1,O\+C\+Wmax)
+
+initial condition
+
+Mi\mbox{[}n\mbox{]}=sigma (a\+\_\+j\+\_\+i$\ast$\+Mj,F\mbox{[}n-\/1\mbox{]})
+
+statistics
+
+performance metric
+
+success probability
+
+access delay
+
+C\+DF
+
+i v.\+s. M\+\_\+i,s\mbox{[}n\mbox{]}
+
+Imax 
+
+References a\+\_\+j\+\_\+i, access\+\_\+delay, c, counter\+\_\+access\+\_\+delay, delta, final\+\_\+cdf, Fm, i, Imax, K, k, Lmax, m, M, M\+\_\+i, M\+\_\+i\+\_\+f, M\+\_\+i\+\_\+s, M\+\_\+i\+\_\+s\+\_\+C, n, Nn, Nn\+\_\+index, O\+CW, R\+A\+\_\+\+RU, Ri, sta, success\+\_\+packet, success\+\_\+probability, success\+\_\+sta, sum, temp, temp1, total\+\_\+cdf, and T\+X\+OP.
+
+
+
+Referenced by main().
+
+
+
+\subsection{Variable Documentation}
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!a@{a}}
+\index{a@{a}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{a}{a}}]{\setlength{\rightskip}{0pt plus 5cm}int a}\hypertarget{dynamic__analysis_8c_aa4c2a5552e9bc49b1816ff532f558c74}{}\label{dynamic__analysis_8c_aa4c2a5552e9bc49b1816ff532f558c74}
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!a\+\_\+j\+\_\+i@{a\+\_\+j\+\_\+i}}
+\index{a\+\_\+j\+\_\+i@{a\+\_\+j\+\_\+i}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{a\+\_\+j\+\_\+i}{a_j_i}}]{\setlength{\rightskip}{0pt plus 5cm}float a\+\_\+j\+\_\+i}\hypertarget{dynamic__analysis_8c_ae5acbf81614d055ed8075397f98f9493}{}\label{dynamic__analysis_8c_ae5acbf81614d055ed8075397f98f9493}
+
+
+alpha\+\_\+j\+\_\+i 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!access\+\_\+delay@{access\+\_\+delay}}
+\index{access\+\_\+delay@{access\+\_\+delay}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{access\+\_\+delay}{access_delay}}]{\setlength{\rightskip}{0pt plus 5cm}double access\+\_\+delay}\hypertarget{dynamic__analysis_8c_a6770f4b277df418aa6ed32716aabc69b}{}\label{dynamic__analysis_8c_a6770f4b277df418aa6ed32716aabc69b}
+
+
+for access delay 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!c@{c}}
+\index{c@{c}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{c}{c}}]{\setlength{\rightskip}{0pt plus 5cm}int c}\hypertarget{dynamic__analysis_8c_a4e1e0e72dd773439e333c84dd762a9c3}{}\label{dynamic__analysis_8c_a4e1e0e72dd773439e333c84dd762a9c3}
+
+
+index of for loop 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!counter\+\_\+access\+\_\+delay@{counter\+\_\+access\+\_\+delay}}
+\index{counter\+\_\+access\+\_\+delay@{counter\+\_\+access\+\_\+delay}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{counter\+\_\+access\+\_\+delay}{counter_access_delay}}]{\setlength{\rightskip}{0pt plus 5cm}double counter\+\_\+access\+\_\+delay}\hypertarget{dynamic__analysis_8c_a15c142af1b2266dbf4bcf5cf69516be1}{}\label{dynamic__analysis_8c_a15c142af1b2266dbf4bcf5cf69516be1}
+
+
+for access delay 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!delta@{delta}}
+\index{delta@{delta}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{delta}{delta}}]{\setlength{\rightskip}{0pt plus 5cm}int delta = 0}\hypertarget{dynamic__analysis_8c_a1dfcb70b9229f2da17dd5922b87ecf2c}{}\label{dynamic__analysis_8c_a1dfcb70b9229f2da17dd5922b87ecf2c}
+
+
+delta 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!final\+\_\+cdf@{final\+\_\+cdf}}
+\index{final\+\_\+cdf@{final\+\_\+cdf}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{final\+\_\+cdf}{final_cdf}}]{\setlength{\rightskip}{0pt plus 5cm}double final\+\_\+cdf}\hypertarget{dynamic__analysis_8c_a6f488533feeb78b1a439a47fafc6420b}{}\label{dynamic__analysis_8c_a6f488533feeb78b1a439a47fafc6420b}
+
+
+for C\+DF 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!Fm@{Fm}}
+\index{Fm@{Fm}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{Fm}{Fm}}]{\setlength{\rightskip}{0pt plus 5cm}double Fm\mbox{[}6\mbox{]}}\hypertarget{dynamic__analysis_8c_a8390a777ee84b713b09fcbb5d2f47024}{}\label{dynamic__analysis_8c_a8390a777ee84b713b09fcbb5d2f47024}
+
+
+for C\+DF 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!i@{i}}
+\index{i@{i}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{i}{i}}]{\setlength{\rightskip}{0pt plus 5cm}int i}\hypertarget{dynamic__analysis_8c_acb559820d9ca11295b4500f179ef6392}{}\label{dynamic__analysis_8c_acb559820d9ca11295b4500f179ef6392}
+
+
+index of for loop 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!Imax@{Imax}}
+\index{Imax@{Imax}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{Imax}{Imax}}]{\setlength{\rightskip}{0pt plus 5cm}int Imax = 34}\hypertarget{dynamic__analysis_8c_a504e9c4516d3b4089e4a9ea17c2ef2fa}{}\label{dynamic__analysis_8c_a504e9c4516d3b4089e4a9ea17c2ef2fa}
+
+
+Imax. 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!j@{j}}
+\index{j@{j}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{j}{j}}]{\setlength{\rightskip}{0pt plus 5cm}int j}\hypertarget{dynamic__analysis_8c_a37d972ae0b47b9099e30983131d31916}{}\label{dynamic__analysis_8c_a37d972ae0b47b9099e30983131d31916}
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!Jmax@{Jmax}}
+\index{Jmax@{Jmax}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{Jmax}{Jmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Jmax}\hypertarget{dynamic__analysis_8c_aa1ce3a5eea7d7c9e58a5755bf12e0510}{}\label{dynamic__analysis_8c_aa1ce3a5eea7d7c9e58a5755bf12e0510}
+
+
+maximum J 
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!Jmin@{Jmin}}
+\index{Jmin@{Jmin}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{Jmin}{Jmin}}]{\setlength{\rightskip}{0pt plus 5cm}int Jmin}\hypertarget{dynamic__analysis_8c_a28b532b3cf29162409a495ecf16c4efd}{}\label{dynamic__analysis_8c_a28b532b3cf29162409a495ecf16c4efd}
+
+
+minimum J 
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!K@{K}}
+\index{K@{K}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{K}{K}}]{\setlength{\rightskip}{0pt plus 5cm}int K = 10}\hypertarget{dynamic__analysis_8c_a2689c4b3931025b79053532a5f1b0a85}{}\label{dynamic__analysis_8c_a2689c4b3931025b79053532a5f1b0a85}
+
+
+reserved slots 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!k@{k}}
+\index{k@{k}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{k}{k}}]{\setlength{\rightskip}{0pt plus 5cm}int k}\hypertarget{dynamic__analysis_8c_ab66ed8e0098c0a86b458672a55a9cca9}{}\label{dynamic__analysis_8c_ab66ed8e0098c0a86b458672a55a9cca9}
+
+
+index of for loop 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!Lmax@{Lmax}}
+\index{Lmax@{Lmax}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{Lmax}{Lmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Lmax = 5}\hypertarget{dynamic__analysis_8c_a66220f2712ab879767e2b0b1f3e79c1d}{}\label{dynamic__analysis_8c_a66220f2712ab879767e2b0b1f3e79c1d}
+
+
+retry limit 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!m@{m}}
+\index{m@{m}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{m}{m}}]{\setlength{\rightskip}{0pt plus 5cm}int m}\hypertarget{dynamic__analysis_8c_a742204794ea328ba293fe59cec79b990}{}\label{dynamic__analysis_8c_a742204794ea328ba293fe59cec79b990}
+
+
+index of for loop 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!M@{M}}
+\index{M@{M}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{M}{M}}]{\setlength{\rightskip}{0pt plus 5cm}double M\mbox{[}100\mbox{]}}\hypertarget{dynamic__analysis_8c_a468749690692c0379578a882d18ae03f}{}\label{dynamic__analysis_8c_a468749690692c0379578a882d18ae03f}
+
+
+array for M 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!M\+\_\+i@{M\+\_\+i}}
+\index{M\+\_\+i@{M\+\_\+i}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i}{M_i}}]{\setlength{\rightskip}{0pt plus 5cm}double M\+\_\+i\mbox{[}100\mbox{]}\mbox{[}6\mbox{]}}\hypertarget{dynamic__analysis_8c_ae543cde0580d71ac9500d7b81128d3f2}{}\label{dynamic__analysis_8c_ae543cde0580d71ac9500d7b81128d3f2}
+
+
+array for Mi 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!M\+\_\+i\+\_\+f@{M\+\_\+i\+\_\+f}}
+\index{M\+\_\+i\+\_\+f@{M\+\_\+i\+\_\+f}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i\+\_\+f}{M_i_f}}]{\setlength{\rightskip}{0pt plus 5cm}double M\+\_\+i\+\_\+f\mbox{[}100\mbox{]}\mbox{[}6\mbox{]}}\hypertarget{dynamic__analysis_8c_a0598245ad000ad15390cb80d45ea2252}{}\label{dynamic__analysis_8c_a0598245ad000ad15390cb80d45ea2252}
+
+
+array for Mif 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!M\+\_\+i\+\_\+s@{M\+\_\+i\+\_\+s}}
+\index{M\+\_\+i\+\_\+s@{M\+\_\+i\+\_\+s}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i\+\_\+s}{M_i_s}}]{\setlength{\rightskip}{0pt plus 5cm}double M\+\_\+i\+\_\+s\mbox{[}100\mbox{]}\mbox{[}6\mbox{]}}\hypertarget{dynamic__analysis_8c_a4bd37829ebbeaeb19ae8018f49a33ec9}{}\label{dynamic__analysis_8c_a4bd37829ebbeaeb19ae8018f49a33ec9}
+
+
+array for Mis 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!M\+\_\+i\+\_\+s\+\_\+C@{M\+\_\+i\+\_\+s\+\_\+C}}
+\index{M\+\_\+i\+\_\+s\+\_\+C@{M\+\_\+i\+\_\+s\+\_\+C}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i\+\_\+s\+\_\+C}{M_i_s_C}}]{\setlength{\rightskip}{0pt plus 5cm}double M\+\_\+i\+\_\+s\+\_\+C\mbox{[}100\mbox{]}}\hypertarget{dynamic__analysis_8c_a49abb259b07d52a183751e5401ee8594}{}\label{dynamic__analysis_8c_a49abb259b07d52a183751e5401ee8594}
+
+
+array for MisC 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!n@{n}}
+\index{n@{n}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{n}{n}}]{\setlength{\rightskip}{0pt plus 5cm}int n}\hypertarget{dynamic__analysis_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{}\label{dynamic__analysis_8c_a76f11d9a0a47b94f72c2d0e77fb32240}
+
+
+index of for loop 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!Nn@{Nn}}
+\index{Nn@{Nn}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{Nn}{Nn}}]{\setlength{\rightskip}{0pt plus 5cm}int Nn}\hypertarget{dynamic__analysis_8c_a7bfb4915d0ef30a664c014be00bad1fe}{}\label{dynamic__analysis_8c_a7bfb4915d0ef30a664c014be00bad1fe}
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!Nn\+\_\+index@{Nn\+\_\+index}}
+\index{Nn\+\_\+index@{Nn\+\_\+index}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{Nn\+\_\+index}{Nn_index}}]{\setlength{\rightskip}{0pt plus 5cm}int Nn\+\_\+index}\hypertarget{dynamic__analysis_8c_a9dc38bd3fb41a39752550015ef4f512c}{}\label{dynamic__analysis_8c_a9dc38bd3fb41a39752550015ef4f512c}
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!O\+CW@{O\+CW}}
+\index{O\+CW@{O\+CW}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{O\+CW}{OCW}}]{\setlength{\rightskip}{0pt plus 5cm}int O\+CW\mbox{[}16\mbox{]}}\hypertarget{dynamic__analysis_8c_a19c303b09c0b5fda03eba722a14650c1}{}\label{dynamic__analysis_8c_a19c303b09c0b5fda03eba722a14650c1}
+
+
+O\+C\+Wn. 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!R@{R}}
+\index{R@{R}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{R}{R}}]{\setlength{\rightskip}{0pt plus 5cm}int R = 15}\hypertarget{dynamic__analysis_8c_a3d90133d3051fbc4816d02efd9566d8e}{}\label{dynamic__analysis_8c_a3d90133d3051fbc4816d02efd9566d8e}
+
+
+RU. 
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!R\+A\+\_\+\+RU@{R\+A\+\_\+\+RU}}
+\index{R\+A\+\_\+\+RU@{R\+A\+\_\+\+RU}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{R\+A\+\_\+\+RU}{RA_RU}}]{\setlength{\rightskip}{0pt plus 5cm}float R\+A\+\_\+\+RU = 15.\+0}\hypertarget{dynamic__analysis_8c_a3ebded876cc18042b8855cd4c27c00ae}{}\label{dynamic__analysis_8c_a3ebded876cc18042b8855cd4c27c00ae}
+
+
+R\+A-\/\+RU in first slot. 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!Ri@{Ri}}
+\index{Ri@{Ri}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{Ri}{Ri}}]{\setlength{\rightskip}{0pt plus 5cm}float Ri\mbox{[}100\mbox{]}}\hypertarget{dynamic__analysis_8c_a1a86abc0e3b72c599d11f8fca1fe029b}{}\label{dynamic__analysis_8c_a1a86abc0e3b72c599d11f8fca1fe029b}
+
+
+number of R\+A-\/\+RU in ith slot 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!sta@{sta}}
+\index{sta@{sta}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{sta}{sta}}]{\setlength{\rightskip}{0pt plus 5cm}int sta = 40}\hypertarget{dynamic__analysis_8c_ab2cb8ab426f06c27553b10c73a4f795c}{}\label{dynamic__analysis_8c_ab2cb8ab426f06c27553b10c73a4f795c}
+
+
+parameter definition 
+
+total S\+TA number 
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!success\+\_\+packet@{success\+\_\+packet}}
+\index{success\+\_\+packet@{success\+\_\+packet}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{success\+\_\+packet}{success_packet}}]{\setlength{\rightskip}{0pt plus 5cm}double success\+\_\+packet}\hypertarget{dynamic__analysis_8c_aa432b6257e899272f50f3ced74d4268e}{}\label{dynamic__analysis_8c_aa432b6257e899272f50f3ced74d4268e}
+
+
+for success packet 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!success\+\_\+probability@{success\+\_\+probability}}
+\index{success\+\_\+probability@{success\+\_\+probability}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{success\+\_\+probability}{success_probability}}]{\setlength{\rightskip}{0pt plus 5cm}double success\+\_\+probability}\hypertarget{dynamic__analysis_8c_a621ed640a0caba2d42ecb9b7d376b3f0}{}\label{dynamic__analysis_8c_a621ed640a0caba2d42ecb9b7d376b3f0}
+
+
+access success probability 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!success\+\_\+sta@{success\+\_\+sta}}
+\index{success\+\_\+sta@{success\+\_\+sta}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{success\+\_\+sta}{success_sta}}]{\setlength{\rightskip}{0pt plus 5cm}double success\+\_\+sta}\hypertarget{dynamic__analysis_8c_a345c2951b3e156ffc738e0de807642b4}{}\label{dynamic__analysis_8c_a345c2951b3e156ffc738e0de807642b4}
+
+
+for success S\+TA, packet 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!sum@{sum}}
+\index{sum@{sum}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{sum}{sum}}]{\setlength{\rightskip}{0pt plus 5cm}float sum}\hypertarget{dynamic__analysis_8c_aeeafe7e9eebbd2a45ce4fa2ae0d96c51}{}\label{dynamic__analysis_8c_aeeafe7e9eebbd2a45ce4fa2ae0d96c51}
+
+
+temp for calculating Imax 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!temp@{temp}}
+\index{temp@{temp}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}float temp}\hypertarget{dynamic__analysis_8c_a24d61a35b72d7299eb6b5f48e71a571b}{}\label{dynamic__analysis_8c_a24d61a35b72d7299eb6b5f48e71a571b}
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!temp1@{temp1}}
+\index{temp1@{temp1}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{temp1}{temp1}}]{\setlength{\rightskip}{0pt plus 5cm}float temp1}\hypertarget{dynamic__analysis_8c_a5e005e112ca8edcc1d9b59fdfaefb7fd}{}\label{dynamic__analysis_8c_a5e005e112ca8edcc1d9b59fdfaefb7fd}
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!total\+\_\+cdf@{total\+\_\+cdf}}
+\index{total\+\_\+cdf@{total\+\_\+cdf}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+cdf}{total_cdf}}]{\setlength{\rightskip}{0pt plus 5cm}double total\+\_\+cdf}\hypertarget{dynamic__analysis_8c_af1cb1a10f88721b26875206ca5f93b92}{}\label{dynamic__analysis_8c_af1cb1a10f88721b26875206ca5f93b92}
+
+
+for C\+DF 
+
+
+
+Referenced by station\+\_\+number().
+
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!total\+\_\+\+Ri@{total\+\_\+\+Ri}}
+\index{total\+\_\+\+Ri@{total\+\_\+\+Ri}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+\+Ri}{total_Ri}}]{\setlength{\rightskip}{0pt plus 5cm}float total\+\_\+\+Ri}\hypertarget{dynamic__analysis_8c_a28e79d928b8e2e20d0836b652f98ea46}{}\label{dynamic__analysis_8c_a28e79d928b8e2e20d0836b652f98ea46}
+\index{dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}!T\+X\+OP@{T\+X\+OP}}
+\index{T\+X\+OP@{T\+X\+OP}!dynamic\+\_\+analysis.\+c@{dynamic\+\_\+analysis.\+c}}
+\subsubsection[{\texorpdfstring{T\+X\+OP}{TXOP}}]{\setlength{\rightskip}{0pt plus 5cm}float T\+X\+OP = 5.\+681}\hypertarget{dynamic__analysis_8c_ae93883d7b7e696e378c6816f9f77b037}{}\label{dynamic__analysis_8c_ae93883d7b7e696e378c6816f9f77b037}
+
+
+The length of T\+X\+OP. 
+
+
+
+Referenced by station\+\_\+number().
+

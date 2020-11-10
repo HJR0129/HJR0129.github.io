@@ -1,0 +1,414 @@
+\hypertarget{fixed__RU__simulation_8c}{}\section{fixed\+\_\+\+R\+U\+\_\+simulation.\+c File Reference}
+\label{fixed__RU__simulation_8c}\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+Include dependency graph for fixed\+\_\+\+R\+U\+\_\+simulation.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{df/d82/fixed__RU__simulation_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_afba1b700b4f80dc7fe8f5a059e8e41d1}{choose\+\_\+ra\+\_\+ru} (int sta\+\_\+1, int tt)
+\item 
+int \hyperlink{fixed__RU__simulation_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_ab2cb8ab426f06c27553b10c73a4f795c}{sta} = 100
+\begin{DoxyCompactList}\small\item\em Use brief, otherwise the index won\textquotesingle{}t have a brief explanation. \end{DoxyCompactList}\item 
+int \hyperlink{fixed__RU__simulation_8c_a582ad1baf82956c0c42d0570b810b45d}{RU} = 15
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a66220f2712ab879767e2b0b1f3e79c1d}{Lmax} = 5
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a0a52be688ac0ff37c30d0baffff10c8d}{slot\+\_\+time} = 11
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a5a0647044878596436db4807d9c76382}{success\+\_\+sta}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a8983b76586c41a8e1af2aaae1d879d64}{total\+\_\+success\+\_\+sta}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a886f0133d837d07d3df1737d81b178aa}{ra\+\_\+ru}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_aa61eed7630095c964ee884133cfd51be}{select\+\_\+ra\+\_\+ru}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_aebec7ab2190fe1acb4434390749b9cd7}{collision\+\_\+ra\+\_\+ru}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a3b54aa6042489a74f696af31d50ccebc}{total\+\_\+collision\+\_\+\+RU}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_a7494e165ae1815e6c64b593e73bf7a7b}{test\+\_\+collision\+\_\+\+RU}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a68eaf9a59ffba031bf1dc152e3b023e0}{fail}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a3494600bf5984023e0bea4c64a0a26f3}{backoff}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a1bd3f5fbccb1628eb13dda4cd02633a4}{test}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a1ad9c1fcda5e485d69a60bbcd2eaeb47}{test\+\_\+number} = 100000
+\item 
+int \hyperlink{fixed__RU__simulation_8c_afe5cbf9b51e39359f46d1dc7566cc8d6}{check\+\_\+collision} = 99
+\item 
+int \hyperlink{fixed__RU__simulation_8c_acb559820d9ca11295b4500f179ef6392}{i}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a37d972ae0b47b9099e30983131d31916}{j}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_ab66ed8e0098c0a86b458672a55a9cca9}{k}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_ac310d9181e916ba43604099aee272c71}{t}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a742204794ea328ba293fe59cec79b990}{m}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_abe378c3c05e5a0dc5fa6f312c28418b8}{total\+\_\+cdf}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_a43a06ba231e62d42dc94e15a9e4c2ab9}{test\+\_\+cdf}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_a90197185c302466029d5bcf2f061e679}{utilization}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_a134705da0f688f8078cd4395b2642d02}{test\+\_\+utilization}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_a9d2115ccd92943e1b183dae612bb2a29}{total\+\_\+utilization}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_ae9657099ad469924f51cfefe0064e585}{access\+\_\+delay}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_ae47e7fad657dc35075edcfd37657504d}{test\+\_\+access\+\_\+delay}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_a61b1340a95b065b69db7a2d59c20639e}{first\+\_\+access\+\_\+delay}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_a45405f028a24aca07edbdc86f1d5f393}{total\+\_\+access\+\_\+delay}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a03f63be455da7b584f72b51cdf8c83d9}{S\+TA} \mbox{[}101\mbox{]}\mbox{[}2\mbox{]}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_acdcce33ff79b661366a072bc6e40c02c}{N\+E\+W\+\_\+\+S\+TA} \mbox{[}101\mbox{]}\mbox{[}2\mbox{]}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_a5d0ed336c8c3f1d945abbb8dbbe07560}{R\+A\+\_\+\+RU} \mbox{[}15\mbox{]}\mbox{[}100\mbox{]}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_ada1afa9a53388da4a95940fd11dd92ae}{Fm} \mbox{[}6\mbox{]}
+\item 
+int \hyperlink{fixed__RU__simulation_8c_ad459e9aac25af28f98af039ef042d25d}{total\+\_\+\+Fm} \mbox{[}6\mbox{]}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_aca8b1dcf18f641e206bf045a3e5ac39e}{M\+\_\+i\+\_\+s} \mbox{[}12\mbox{]}\mbox{[}6\mbox{]}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_a3a2c50f3f7a13dc3270473534bc73dea}{M\+\_\+i\+\_\+s\+\_\+for\+\_\+time} \mbox{[}12\mbox{]}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_acb9872e8a780d9792317255be909fe22}{success\+\_\+probability}
+\item 
+float \hyperlink{fixed__RU__simulation_8c_ad93274f2b64c938cd4fade99d2bcf781}{test\+\_\+success\+\_\+probability}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!choose\+\_\+ra\+\_\+ru@{choose\+\_\+ra\+\_\+ru}}
+\index{choose\+\_\+ra\+\_\+ru@{choose\+\_\+ra\+\_\+ru}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{choose\+\_\+ra\+\_\+ru(int sta\+\_\+1, int tt)}{choose_ra_ru(int sta_1, int tt)}}]{\setlength{\rightskip}{0pt plus 5cm}int choose\+\_\+ra\+\_\+ru (
+\begin{DoxyParamCaption}
+\item[{int}]{sta\+\_\+1, }
+\item[{int}]{tt}
+\end{DoxyParamCaption}
+)}\hypertarget{fixed__RU__simulation_8c_afba1b700b4f80dc7fe8f5a059e8e41d1}{}\label{fixed__RU__simulation_8c_afba1b700b4f80dc7fe8f5a059e8e41d1}
+
+
+References backoff, check\+\_\+collision, collision\+\_\+ra\+\_\+ru, fail, Fm, i, j, k, Lmax, M\+\_\+i\+\_\+s, N\+E\+W\+\_\+\+S\+TA, R\+A\+\_\+\+RU, RU, select\+\_\+ra\+\_\+ru, S\+TA, and success\+\_\+sta.
+
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!main@{main}}
+\index{main@{main}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fixed__RU__simulation_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{fixed__RU__simulation_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+References access\+\_\+delay, choose\+\_\+ra\+\_\+ru(), collision\+\_\+ra\+\_\+ru, fail, first\+\_\+access\+\_\+delay, Fm, i, Lmax, m, M\+\_\+i\+\_\+s, M\+\_\+i\+\_\+s\+\_\+for\+\_\+time, N\+E\+W\+\_\+\+S\+TA, RU, slot\+\_\+time, sta, S\+TA, success\+\_\+probability, success\+\_\+sta, t, test, test\+\_\+access\+\_\+delay, test\+\_\+cdf, test\+\_\+collision\+\_\+\+RU, test\+\_\+number, test\+\_\+success\+\_\+probability, test\+\_\+utilization, total\+\_\+access\+\_\+delay, total\+\_\+cdf, total\+\_\+collision\+\_\+\+RU, total\+\_\+success\+\_\+sta, total\+\_\+utilization, and utilization.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{da/df1/fixed__RU__simulation_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!access\+\_\+delay@{access\+\_\+delay}}
+\index{access\+\_\+delay@{access\+\_\+delay}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{access\+\_\+delay}{access_delay}}]{\setlength{\rightskip}{0pt plus 5cm}float access\+\_\+delay}\hypertarget{fixed__RU__simulation_8c_ae9657099ad469924f51cfefe0064e585}{}\label{fixed__RU__simulation_8c_ae9657099ad469924f51cfefe0064e585}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!backoff@{backoff}}
+\index{backoff@{backoff}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{backoff}{backoff}}]{\setlength{\rightskip}{0pt plus 5cm}int backoff}\hypertarget{fixed__RU__simulation_8c_a3494600bf5984023e0bea4c64a0a26f3}{}\label{fixed__RU__simulation_8c_a3494600bf5984023e0bea4c64a0a26f3}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!check\+\_\+collision@{check\+\_\+collision}}
+\index{check\+\_\+collision@{check\+\_\+collision}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{check\+\_\+collision}{check_collision}}]{\setlength{\rightskip}{0pt plus 5cm}int check\+\_\+collision = 99}\hypertarget{fixed__RU__simulation_8c_afe5cbf9b51e39359f46d1dc7566cc8d6}{}\label{fixed__RU__simulation_8c_afe5cbf9b51e39359f46d1dc7566cc8d6}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!collision\+\_\+ra\+\_\+ru@{collision\+\_\+ra\+\_\+ru}}
+\index{collision\+\_\+ra\+\_\+ru@{collision\+\_\+ra\+\_\+ru}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{collision\+\_\+ra\+\_\+ru}{collision_ra_ru}}]{\setlength{\rightskip}{0pt plus 5cm}int collision\+\_\+ra\+\_\+ru}\hypertarget{fixed__RU__simulation_8c_aebec7ab2190fe1acb4434390749b9cd7}{}\label{fixed__RU__simulation_8c_aebec7ab2190fe1acb4434390749b9cd7}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!fail@{fail}}
+\index{fail@{fail}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{fail}{fail}}]{\setlength{\rightskip}{0pt plus 5cm}int fail}\hypertarget{fixed__RU__simulation_8c_a68eaf9a59ffba031bf1dc152e3b023e0}{}\label{fixed__RU__simulation_8c_a68eaf9a59ffba031bf1dc152e3b023e0}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!first\+\_\+access\+\_\+delay@{first\+\_\+access\+\_\+delay}}
+\index{first\+\_\+access\+\_\+delay@{first\+\_\+access\+\_\+delay}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{first\+\_\+access\+\_\+delay}{first_access_delay}}]{\setlength{\rightskip}{0pt plus 5cm}float first\+\_\+access\+\_\+delay}\hypertarget{fixed__RU__simulation_8c_a61b1340a95b065b69db7a2d59c20639e}{}\label{fixed__RU__simulation_8c_a61b1340a95b065b69db7a2d59c20639e}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!Fm@{Fm}}
+\index{Fm@{Fm}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{Fm}{Fm}}]{\setlength{\rightskip}{0pt plus 5cm}int Fm\mbox{[}6\mbox{]}}\hypertarget{fixed__RU__simulation_8c_ada1afa9a53388da4a95940fd11dd92ae}{}\label{fixed__RU__simulation_8c_ada1afa9a53388da4a95940fd11dd92ae}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!i@{i}}
+\index{i@{i}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{i}{i}}]{\setlength{\rightskip}{0pt plus 5cm}int i}\hypertarget{fixed__RU__simulation_8c_acb559820d9ca11295b4500f179ef6392}{}\label{fixed__RU__simulation_8c_acb559820d9ca11295b4500f179ef6392}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!j@{j}}
+\index{j@{j}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{j}{j}}]{\setlength{\rightskip}{0pt plus 5cm}int j}\hypertarget{fixed__RU__simulation_8c_a37d972ae0b47b9099e30983131d31916}{}\label{fixed__RU__simulation_8c_a37d972ae0b47b9099e30983131d31916}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!k@{k}}
+\index{k@{k}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{k}{k}}]{\setlength{\rightskip}{0pt plus 5cm}int k}\hypertarget{fixed__RU__simulation_8c_ab66ed8e0098c0a86b458672a55a9cca9}{}\label{fixed__RU__simulation_8c_ab66ed8e0098c0a86b458672a55a9cca9}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!Lmax@{Lmax}}
+\index{Lmax@{Lmax}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{Lmax}{Lmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Lmax = 5}\hypertarget{fixed__RU__simulation_8c_a66220f2712ab879767e2b0b1f3e79c1d}{}\label{fixed__RU__simulation_8c_a66220f2712ab879767e2b0b1f3e79c1d}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!m@{m}}
+\index{m@{m}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{m}{m}}]{\setlength{\rightskip}{0pt plus 5cm}int m}\hypertarget{fixed__RU__simulation_8c_a742204794ea328ba293fe59cec79b990}{}\label{fixed__RU__simulation_8c_a742204794ea328ba293fe59cec79b990}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!M\+\_\+i\+\_\+s@{M\+\_\+i\+\_\+s}}
+\index{M\+\_\+i\+\_\+s@{M\+\_\+i\+\_\+s}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i\+\_\+s}{M_i_s}}]{\setlength{\rightskip}{0pt plus 5cm}float M\+\_\+i\+\_\+s\mbox{[}12\mbox{]}\mbox{[}6\mbox{]}}\hypertarget{fixed__RU__simulation_8c_aca8b1dcf18f641e206bf045a3e5ac39e}{}\label{fixed__RU__simulation_8c_aca8b1dcf18f641e206bf045a3e5ac39e}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!M\+\_\+i\+\_\+s\+\_\+for\+\_\+time@{M\+\_\+i\+\_\+s\+\_\+for\+\_\+time}}
+\index{M\+\_\+i\+\_\+s\+\_\+for\+\_\+time@{M\+\_\+i\+\_\+s\+\_\+for\+\_\+time}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i\+\_\+s\+\_\+for\+\_\+time}{M_i_s_for_time}}]{\setlength{\rightskip}{0pt plus 5cm}float M\+\_\+i\+\_\+s\+\_\+for\+\_\+time\mbox{[}12\mbox{]}}\hypertarget{fixed__RU__simulation_8c_a3a2c50f3f7a13dc3270473534bc73dea}{}\label{fixed__RU__simulation_8c_a3a2c50f3f7a13dc3270473534bc73dea}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!N\+E\+W\+\_\+\+S\+TA@{N\+E\+W\+\_\+\+S\+TA}}
+\index{N\+E\+W\+\_\+\+S\+TA@{N\+E\+W\+\_\+\+S\+TA}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{N\+E\+W\+\_\+\+S\+TA}{NEW_STA}}]{\setlength{\rightskip}{0pt plus 5cm}int N\+E\+W\+\_\+\+S\+TA\mbox{[}101\mbox{]}\mbox{[}2\mbox{]}}\hypertarget{fixed__RU__simulation_8c_acdcce33ff79b661366a072bc6e40c02c}{}\label{fixed__RU__simulation_8c_acdcce33ff79b661366a072bc6e40c02c}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!ra\+\_\+ru@{ra\+\_\+ru}}
+\index{ra\+\_\+ru@{ra\+\_\+ru}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{ra\+\_\+ru}{ra_ru}}]{\setlength{\rightskip}{0pt plus 5cm}int ra\+\_\+ru}\hypertarget{fixed__RU__simulation_8c_a886f0133d837d07d3df1737d81b178aa}{}\label{fixed__RU__simulation_8c_a886f0133d837d07d3df1737d81b178aa}
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!R\+A\+\_\+\+RU@{R\+A\+\_\+\+RU}}
+\index{R\+A\+\_\+\+RU@{R\+A\+\_\+\+RU}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{R\+A\+\_\+\+RU}{RA_RU}}]{\setlength{\rightskip}{0pt plus 5cm}int R\+A\+\_\+\+RU\mbox{[}15\mbox{]}\mbox{[}100\mbox{]}}\hypertarget{fixed__RU__simulation_8c_a5d0ed336c8c3f1d945abbb8dbbe07560}{}\label{fixed__RU__simulation_8c_a5d0ed336c8c3f1d945abbb8dbbe07560}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!RU@{RU}}
+\index{RU@{RU}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{RU}{RU}}]{\setlength{\rightskip}{0pt plus 5cm}int RU = 15}\hypertarget{fixed__RU__simulation_8c_a582ad1baf82956c0c42d0570b810b45d}{}\label{fixed__RU__simulation_8c_a582ad1baf82956c0c42d0570b810b45d}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!select\+\_\+ra\+\_\+ru@{select\+\_\+ra\+\_\+ru}}
+\index{select\+\_\+ra\+\_\+ru@{select\+\_\+ra\+\_\+ru}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{select\+\_\+ra\+\_\+ru}{select_ra_ru}}]{\setlength{\rightskip}{0pt plus 5cm}int select\+\_\+ra\+\_\+ru}\hypertarget{fixed__RU__simulation_8c_aa61eed7630095c964ee884133cfd51be}{}\label{fixed__RU__simulation_8c_aa61eed7630095c964ee884133cfd51be}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!slot\+\_\+time@{slot\+\_\+time}}
+\index{slot\+\_\+time@{slot\+\_\+time}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{slot\+\_\+time}{slot_time}}]{\setlength{\rightskip}{0pt plus 5cm}int slot\+\_\+time = 11}\hypertarget{fixed__RU__simulation_8c_a0a52be688ac0ff37c30d0baffff10c8d}{}\label{fixed__RU__simulation_8c_a0a52be688ac0ff37c30d0baffff10c8d}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!sta@{sta}}
+\index{sta@{sta}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{sta}{sta}}]{\setlength{\rightskip}{0pt plus 5cm}int sta = 100}\hypertarget{fixed__RU__simulation_8c_ab2cb8ab426f06c27553b10c73a4f795c}{}\label{fixed__RU__simulation_8c_ab2cb8ab426f06c27553b10c73a4f795c}
+
+
+Use brief, otherwise the index won\textquotesingle{}t have a brief explanation. 
+
+Detailed explanation. 
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!S\+TA@{S\+TA}}
+\index{S\+TA@{S\+TA}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{S\+TA}{STA}}]{\setlength{\rightskip}{0pt plus 5cm}int S\+TA\mbox{[}101\mbox{]}\mbox{[}2\mbox{]}}\hypertarget{fixed__RU__simulation_8c_a03f63be455da7b584f72b51cdf8c83d9}{}\label{fixed__RU__simulation_8c_a03f63be455da7b584f72b51cdf8c83d9}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!success\+\_\+probability@{success\+\_\+probability}}
+\index{success\+\_\+probability@{success\+\_\+probability}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{success\+\_\+probability}{success_probability}}]{\setlength{\rightskip}{0pt plus 5cm}float success\+\_\+probability}\hypertarget{fixed__RU__simulation_8c_acb9872e8a780d9792317255be909fe22}{}\label{fixed__RU__simulation_8c_acb9872e8a780d9792317255be909fe22}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!success\+\_\+sta@{success\+\_\+sta}}
+\index{success\+\_\+sta@{success\+\_\+sta}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{success\+\_\+sta}{success_sta}}]{\setlength{\rightskip}{0pt plus 5cm}int success\+\_\+sta}\hypertarget{fixed__RU__simulation_8c_a5a0647044878596436db4807d9c76382}{}\label{fixed__RU__simulation_8c_a5a0647044878596436db4807d9c76382}
+
+
+Referenced by choose\+\_\+ra\+\_\+ru(), and main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!t@{t}}
+\index{t@{t}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{t}{t}}]{\setlength{\rightskip}{0pt plus 5cm}int t}\hypertarget{fixed__RU__simulation_8c_ac310d9181e916ba43604099aee272c71}{}\label{fixed__RU__simulation_8c_ac310d9181e916ba43604099aee272c71}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!test@{test}}
+\index{test@{test}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{test}{test}}]{\setlength{\rightskip}{0pt plus 5cm}int test}\hypertarget{fixed__RU__simulation_8c_a1bd3f5fbccb1628eb13dda4cd02633a4}{}\label{fixed__RU__simulation_8c_a1bd3f5fbccb1628eb13dda4cd02633a4}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!test\+\_\+access\+\_\+delay@{test\+\_\+access\+\_\+delay}}
+\index{test\+\_\+access\+\_\+delay@{test\+\_\+access\+\_\+delay}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{test\+\_\+access\+\_\+delay}{test_access_delay}}]{\setlength{\rightskip}{0pt plus 5cm}float test\+\_\+access\+\_\+delay}\hypertarget{fixed__RU__simulation_8c_ae47e7fad657dc35075edcfd37657504d}{}\label{fixed__RU__simulation_8c_ae47e7fad657dc35075edcfd37657504d}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!test\+\_\+cdf@{test\+\_\+cdf}}
+\index{test\+\_\+cdf@{test\+\_\+cdf}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{test\+\_\+cdf}{test_cdf}}]{\setlength{\rightskip}{0pt plus 5cm}float test\+\_\+cdf}\hypertarget{fixed__RU__simulation_8c_a43a06ba231e62d42dc94e15a9e4c2ab9}{}\label{fixed__RU__simulation_8c_a43a06ba231e62d42dc94e15a9e4c2ab9}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!test\+\_\+collision\+\_\+\+RU@{test\+\_\+collision\+\_\+\+RU}}
+\index{test\+\_\+collision\+\_\+\+RU@{test\+\_\+collision\+\_\+\+RU}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{test\+\_\+collision\+\_\+\+RU}{test_collision_RU}}]{\setlength{\rightskip}{0pt plus 5cm}float test\+\_\+collision\+\_\+\+RU}\hypertarget{fixed__RU__simulation_8c_a7494e165ae1815e6c64b593e73bf7a7b}{}\label{fixed__RU__simulation_8c_a7494e165ae1815e6c64b593e73bf7a7b}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!test\+\_\+number@{test\+\_\+number}}
+\index{test\+\_\+number@{test\+\_\+number}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{test\+\_\+number}{test_number}}]{\setlength{\rightskip}{0pt plus 5cm}int test\+\_\+number = 100000}\hypertarget{fixed__RU__simulation_8c_a1ad9c1fcda5e485d69a60bbcd2eaeb47}{}\label{fixed__RU__simulation_8c_a1ad9c1fcda5e485d69a60bbcd2eaeb47}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!test\+\_\+success\+\_\+probability@{test\+\_\+success\+\_\+probability}}
+\index{test\+\_\+success\+\_\+probability@{test\+\_\+success\+\_\+probability}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{test\+\_\+success\+\_\+probability}{test_success_probability}}]{\setlength{\rightskip}{0pt plus 5cm}float test\+\_\+success\+\_\+probability}\hypertarget{fixed__RU__simulation_8c_ad93274f2b64c938cd4fade99d2bcf781}{}\label{fixed__RU__simulation_8c_ad93274f2b64c938cd4fade99d2bcf781}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!test\+\_\+utilization@{test\+\_\+utilization}}
+\index{test\+\_\+utilization@{test\+\_\+utilization}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{test\+\_\+utilization}{test_utilization}}]{\setlength{\rightskip}{0pt plus 5cm}float test\+\_\+utilization}\hypertarget{fixed__RU__simulation_8c_a134705da0f688f8078cd4395b2642d02}{}\label{fixed__RU__simulation_8c_a134705da0f688f8078cd4395b2642d02}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!total\+\_\+access\+\_\+delay@{total\+\_\+access\+\_\+delay}}
+\index{total\+\_\+access\+\_\+delay@{total\+\_\+access\+\_\+delay}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+access\+\_\+delay}{total_access_delay}}]{\setlength{\rightskip}{0pt plus 5cm}float total\+\_\+access\+\_\+delay}\hypertarget{fixed__RU__simulation_8c_a45405f028a24aca07edbdc86f1d5f393}{}\label{fixed__RU__simulation_8c_a45405f028a24aca07edbdc86f1d5f393}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!total\+\_\+cdf@{total\+\_\+cdf}}
+\index{total\+\_\+cdf@{total\+\_\+cdf}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+cdf}{total_cdf}}]{\setlength{\rightskip}{0pt plus 5cm}float total\+\_\+cdf}\hypertarget{fixed__RU__simulation_8c_abe378c3c05e5a0dc5fa6f312c28418b8}{}\label{fixed__RU__simulation_8c_abe378c3c05e5a0dc5fa6f312c28418b8}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!total\+\_\+collision\+\_\+\+RU@{total\+\_\+collision\+\_\+\+RU}}
+\index{total\+\_\+collision\+\_\+\+RU@{total\+\_\+collision\+\_\+\+RU}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+collision\+\_\+\+RU}{total_collision_RU}}]{\setlength{\rightskip}{0pt plus 5cm}int total\+\_\+collision\+\_\+\+RU}\hypertarget{fixed__RU__simulation_8c_a3b54aa6042489a74f696af31d50ccebc}{}\label{fixed__RU__simulation_8c_a3b54aa6042489a74f696af31d50ccebc}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!total\+\_\+\+Fm@{total\+\_\+\+Fm}}
+\index{total\+\_\+\+Fm@{total\+\_\+\+Fm}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+\+Fm}{total_Fm}}]{\setlength{\rightskip}{0pt plus 5cm}int total\+\_\+\+Fm\mbox{[}6\mbox{]}}\hypertarget{fixed__RU__simulation_8c_ad459e9aac25af28f98af039ef042d25d}{}\label{fixed__RU__simulation_8c_ad459e9aac25af28f98af039ef042d25d}
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!total\+\_\+success\+\_\+sta@{total\+\_\+success\+\_\+sta}}
+\index{total\+\_\+success\+\_\+sta@{total\+\_\+success\+\_\+sta}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+success\+\_\+sta}{total_success_sta}}]{\setlength{\rightskip}{0pt plus 5cm}int total\+\_\+success\+\_\+sta}\hypertarget{fixed__RU__simulation_8c_a8983b76586c41a8e1af2aaae1d879d64}{}\label{fixed__RU__simulation_8c_a8983b76586c41a8e1af2aaae1d879d64}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!total\+\_\+utilization@{total\+\_\+utilization}}
+\index{total\+\_\+utilization@{total\+\_\+utilization}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+utilization}{total_utilization}}]{\setlength{\rightskip}{0pt plus 5cm}float total\+\_\+utilization}\hypertarget{fixed__RU__simulation_8c_a9d2115ccd92943e1b183dae612bb2a29}{}\label{fixed__RU__simulation_8c_a9d2115ccd92943e1b183dae612bb2a29}
+
+
+Referenced by main().
+
+\index{fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}!utilization@{utilization}}
+\index{utilization@{utilization}!fixed\+\_\+\+R\+U\+\_\+simulation.\+c@{fixed\+\_\+\+R\+U\+\_\+simulation.\+c}}
+\subsubsection[{\texorpdfstring{utilization}{utilization}}]{\setlength{\rightskip}{0pt plus 5cm}float utilization}\hypertarget{fixed__RU__simulation_8c_a90197185c302466029d5bcf2f061e679}{}\label{fixed__RU__simulation_8c_a90197185c302466029d5bcf2f061e679}
+
+
+Referenced by main().
+

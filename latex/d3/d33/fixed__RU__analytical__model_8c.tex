@@ -1,0 +1,341 @@
+\hypertarget{fixed__RU__analytical__model_8c}{}\section{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c File Reference}
+\label{fixed__RU__analytical__model_8c}\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+Include dependency graph for fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{df/d9a/fixed__RU__analytical__model_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_a44c532972eac9a2be87f26f5f9a171a1}{station\+\_\+number} ()
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_ab2cb8ab426f06c27553b10c73a4f795c}{sta} = 50
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_a66220f2712ab879767e2b0b1f3e79c1d}{Lmax} = 5
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_a504e9c4516d3b4089e4a9ea17c2ef2fa}{Imax} = 0
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a895acb289ea3b6df866ac51e4498df09}{T\+X\+OP} = 5.\+681
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_aa1ce3a5eea7d7c9e58a5755bf12e0510}{Jmax}
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_a28b532b3cf29162409a495ecf16c4efd}{Jmin}
+\item 
+float \hyperlink{fixed__RU__analytical__model_8c_ae5acbf81614d055ed8075397f98f9493}{a\+\_\+j\+\_\+i}
+\item 
+float \hyperlink{fixed__RU__analytical__model_8c_a99275ca1021080892e684c109578d255}{a\+\_\+j\+\_\+i\+\_\+first}
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_a3d90133d3051fbc4816d02efd9566d8e}{R} = 15
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_acb559820d9ca11295b4500f179ef6392}{i}
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_a37d972ae0b47b9099e30983131d31916}{j}
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a9e1241155e45b1e9f18abfb393bd40b2}{collision\+\_\+R} \mbox{[}100\mbox{]}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_ad87aa5050f05d2573e187a6189e92e3d}{total\+\_\+collision\+\_\+\+RU}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a6770f4b277df418aa6ed32716aabc69b}{access\+\_\+delay}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a15c142af1b2266dbf4bcf5cf69516be1}{counter\+\_\+access\+\_\+delay}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a8390a777ee84b713b09fcbb5d2f47024}{Fm} \mbox{[}6\mbox{]}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_af1cb1a10f88721b26875206ca5f93b92}{total\+\_\+cdf}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a6f488533feeb78b1a439a47fafc6420b}{final\+\_\+cdf}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_acf226c3950cefa8d84ce63f84dd29928}{total\+\_\+utilization}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_aaeec171fb246a7d88e1f2f54f7ddab80}{utilization}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_ad4cf156d580decb134fc334e63aebc79}{collision\+\_\+\+R\+U\+\_\+probabilty}
+\item 
+int \hyperlink{fixed__RU__analytical__model_8c_af115fd85849d5da7300072515be18a69}{O\+CW} \mbox{[}6\mbox{]}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a345c2951b3e156ffc738e0de807642b4}{success\+\_\+sta}
+\item 
+float \hyperlink{fixed__RU__analytical__model_8c_a3ebded876cc18042b8855cd4c27c00ae}{R\+A\+\_\+\+RU} = 15.\+0
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_aca3eed2281e88dad5452db616e301110}{M} \mbox{[}27\mbox{]}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a8130ab5793014d97e3f38b9c74859da7}{M\+\_\+i} \mbox{[}27\mbox{]}\mbox{[}6\mbox{]}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_adf84a2445f0845be786b1ad14421ceef}{M\+\_\+i\+\_\+s} \mbox{[}27\mbox{]}\mbox{[}6\mbox{]}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_ade2fbebbde70e5c12505d06eed28aed6}{M\+\_\+i\+\_\+f} \mbox{[}27\mbox{]}\mbox{[}6\mbox{]}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a12c6d1b6895c6cbcc8fd6992c7fbe3ff}{M\+\_\+i\+\_\+s\+\_\+C} \mbox{[}27\mbox{]}
+\item 
+double \hyperlink{fixed__RU__analytical__model_8c_a621ed640a0caba2d42ecb9b7d376b3f0}{success\+\_\+probability}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!main@{main}}
+\index{main@{main}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fixed__RU__analytical__model_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{fixed__RU__analytical__model_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+References station\+\_\+number().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{d3/d33/fixed__RU__analytical__model_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!station\+\_\+number@{station\+\_\+number}}
+\index{station\+\_\+number@{station\+\_\+number}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{station\+\_\+number()}{station_number()}}]{\setlength{\rightskip}{0pt plus 5cm}int station\+\_\+number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fixed__RU__analytical__model_8c_a44c532972eac9a2be87f26f5f9a171a1}{}\label{fixed__RU__analytical__model_8c_a44c532972eac9a2be87f26f5f9a171a1}
+
+
+References a\+\_\+j\+\_\+i, a\+\_\+j\+\_\+i\+\_\+first, access\+\_\+delay, collision\+\_\+R, collision\+\_\+\+R\+U\+\_\+probabilty, counter\+\_\+access\+\_\+delay, final\+\_\+cdf, Fm, i, Imax, j, Jmax, Jmin, Lmax, M, M\+\_\+i, M\+\_\+i\+\_\+f, M\+\_\+i\+\_\+s, M\+\_\+i\+\_\+s\+\_\+C, n, O\+CW, R, R\+A\+\_\+\+RU, sta, success\+\_\+probability, success\+\_\+sta, total\+\_\+cdf, total\+\_\+collision\+\_\+\+RU, T\+X\+OP, and utilization.
+
+
+
+Referenced by main().
+
+
+
+\subsection{Variable Documentation}
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!a\+\_\+j\+\_\+i@{a\+\_\+j\+\_\+i}}
+\index{a\+\_\+j\+\_\+i@{a\+\_\+j\+\_\+i}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{a\+\_\+j\+\_\+i}{a_j_i}}]{\setlength{\rightskip}{0pt plus 5cm}float a\+\_\+j\+\_\+i}\hypertarget{fixed__RU__analytical__model_8c_ae5acbf81614d055ed8075397f98f9493}{}\label{fixed__RU__analytical__model_8c_ae5acbf81614d055ed8075397f98f9493}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!a\+\_\+j\+\_\+i\+\_\+first@{a\+\_\+j\+\_\+i\+\_\+first}}
+\index{a\+\_\+j\+\_\+i\+\_\+first@{a\+\_\+j\+\_\+i\+\_\+first}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{a\+\_\+j\+\_\+i\+\_\+first}{a_j_i_first}}]{\setlength{\rightskip}{0pt plus 5cm}float a\+\_\+j\+\_\+i\+\_\+first}\hypertarget{fixed__RU__analytical__model_8c_a99275ca1021080892e684c109578d255}{}\label{fixed__RU__analytical__model_8c_a99275ca1021080892e684c109578d255}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!access\+\_\+delay@{access\+\_\+delay}}
+\index{access\+\_\+delay@{access\+\_\+delay}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{access\+\_\+delay}{access_delay}}]{\setlength{\rightskip}{0pt plus 5cm}double access\+\_\+delay}\hypertarget{fixed__RU__analytical__model_8c_a6770f4b277df418aa6ed32716aabc69b}{}\label{fixed__RU__analytical__model_8c_a6770f4b277df418aa6ed32716aabc69b}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!collision\+\_\+R@{collision\+\_\+R}}
+\index{collision\+\_\+R@{collision\+\_\+R}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{collision\+\_\+R}{collision_R}}]{\setlength{\rightskip}{0pt plus 5cm}double collision\+\_\+R\mbox{[}100\mbox{]}}\hypertarget{fixed__RU__analytical__model_8c_a9e1241155e45b1e9f18abfb393bd40b2}{}\label{fixed__RU__analytical__model_8c_a9e1241155e45b1e9f18abfb393bd40b2}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!collision\+\_\+\+R\+U\+\_\+probabilty@{collision\+\_\+\+R\+U\+\_\+probabilty}}
+\index{collision\+\_\+\+R\+U\+\_\+probabilty@{collision\+\_\+\+R\+U\+\_\+probabilty}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{collision\+\_\+\+R\+U\+\_\+probabilty}{collision_RU_probabilty}}]{\setlength{\rightskip}{0pt plus 5cm}double collision\+\_\+\+R\+U\+\_\+probabilty}\hypertarget{fixed__RU__analytical__model_8c_ad4cf156d580decb134fc334e63aebc79}{}\label{fixed__RU__analytical__model_8c_ad4cf156d580decb134fc334e63aebc79}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!counter\+\_\+access\+\_\+delay@{counter\+\_\+access\+\_\+delay}}
+\index{counter\+\_\+access\+\_\+delay@{counter\+\_\+access\+\_\+delay}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{counter\+\_\+access\+\_\+delay}{counter_access_delay}}]{\setlength{\rightskip}{0pt plus 5cm}double counter\+\_\+access\+\_\+delay}\hypertarget{fixed__RU__analytical__model_8c_a15c142af1b2266dbf4bcf5cf69516be1}{}\label{fixed__RU__analytical__model_8c_a15c142af1b2266dbf4bcf5cf69516be1}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!final\+\_\+cdf@{final\+\_\+cdf}}
+\index{final\+\_\+cdf@{final\+\_\+cdf}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{final\+\_\+cdf}{final_cdf}}]{\setlength{\rightskip}{0pt plus 5cm}double final\+\_\+cdf}\hypertarget{fixed__RU__analytical__model_8c_a6f488533feeb78b1a439a47fafc6420b}{}\label{fixed__RU__analytical__model_8c_a6f488533feeb78b1a439a47fafc6420b}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!Fm@{Fm}}
+\index{Fm@{Fm}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{Fm}{Fm}}]{\setlength{\rightskip}{0pt plus 5cm}double Fm\mbox{[}6\mbox{]}}\hypertarget{fixed__RU__analytical__model_8c_a8390a777ee84b713b09fcbb5d2f47024}{}\label{fixed__RU__analytical__model_8c_a8390a777ee84b713b09fcbb5d2f47024}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!i@{i}}
+\index{i@{i}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{i}{i}}]{\setlength{\rightskip}{0pt plus 5cm}int i}\hypertarget{fixed__RU__analytical__model_8c_acb559820d9ca11295b4500f179ef6392}{}\label{fixed__RU__analytical__model_8c_acb559820d9ca11295b4500f179ef6392}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!Imax@{Imax}}
+\index{Imax@{Imax}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{Imax}{Imax}}]{\setlength{\rightskip}{0pt plus 5cm}int Imax = 0}\hypertarget{fixed__RU__analytical__model_8c_a504e9c4516d3b4089e4a9ea17c2ef2fa}{}\label{fixed__RU__analytical__model_8c_a504e9c4516d3b4089e4a9ea17c2ef2fa}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!j@{j}}
+\index{j@{j}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{j}{j}}]{\setlength{\rightskip}{0pt plus 5cm}int j}\hypertarget{fixed__RU__analytical__model_8c_a37d972ae0b47b9099e30983131d31916}{}\label{fixed__RU__analytical__model_8c_a37d972ae0b47b9099e30983131d31916}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!Jmax@{Jmax}}
+\index{Jmax@{Jmax}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{Jmax}{Jmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Jmax}\hypertarget{fixed__RU__analytical__model_8c_aa1ce3a5eea7d7c9e58a5755bf12e0510}{}\label{fixed__RU__analytical__model_8c_aa1ce3a5eea7d7c9e58a5755bf12e0510}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!Jmin@{Jmin}}
+\index{Jmin@{Jmin}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{Jmin}{Jmin}}]{\setlength{\rightskip}{0pt plus 5cm}int Jmin}\hypertarget{fixed__RU__analytical__model_8c_a28b532b3cf29162409a495ecf16c4efd}{}\label{fixed__RU__analytical__model_8c_a28b532b3cf29162409a495ecf16c4efd}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!Lmax@{Lmax}}
+\index{Lmax@{Lmax}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{Lmax}{Lmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Lmax = 5}\hypertarget{fixed__RU__analytical__model_8c_a66220f2712ab879767e2b0b1f3e79c1d}{}\label{fixed__RU__analytical__model_8c_a66220f2712ab879767e2b0b1f3e79c1d}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!M@{M}}
+\index{M@{M}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{M}{M}}]{\setlength{\rightskip}{0pt plus 5cm}double M\mbox{[}27\mbox{]}}\hypertarget{fixed__RU__analytical__model_8c_aca3eed2281e88dad5452db616e301110}{}\label{fixed__RU__analytical__model_8c_aca3eed2281e88dad5452db616e301110}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!M\+\_\+i@{M\+\_\+i}}
+\index{M\+\_\+i@{M\+\_\+i}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i}{M_i}}]{\setlength{\rightskip}{0pt plus 5cm}double M\+\_\+i\mbox{[}27\mbox{]}\mbox{[}6\mbox{]}}\hypertarget{fixed__RU__analytical__model_8c_a8130ab5793014d97e3f38b9c74859da7}{}\label{fixed__RU__analytical__model_8c_a8130ab5793014d97e3f38b9c74859da7}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!M\+\_\+i\+\_\+f@{M\+\_\+i\+\_\+f}}
+\index{M\+\_\+i\+\_\+f@{M\+\_\+i\+\_\+f}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i\+\_\+f}{M_i_f}}]{\setlength{\rightskip}{0pt plus 5cm}double M\+\_\+i\+\_\+f\mbox{[}27\mbox{]}\mbox{[}6\mbox{]}}\hypertarget{fixed__RU__analytical__model_8c_ade2fbebbde70e5c12505d06eed28aed6}{}\label{fixed__RU__analytical__model_8c_ade2fbebbde70e5c12505d06eed28aed6}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!M\+\_\+i\+\_\+s@{M\+\_\+i\+\_\+s}}
+\index{M\+\_\+i\+\_\+s@{M\+\_\+i\+\_\+s}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i\+\_\+s}{M_i_s}}]{\setlength{\rightskip}{0pt plus 5cm}double M\+\_\+i\+\_\+s\mbox{[}27\mbox{]}\mbox{[}6\mbox{]}}\hypertarget{fixed__RU__analytical__model_8c_adf84a2445f0845be786b1ad14421ceef}{}\label{fixed__RU__analytical__model_8c_adf84a2445f0845be786b1ad14421ceef}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!M\+\_\+i\+\_\+s\+\_\+C@{M\+\_\+i\+\_\+s\+\_\+C}}
+\index{M\+\_\+i\+\_\+s\+\_\+C@{M\+\_\+i\+\_\+s\+\_\+C}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+i\+\_\+s\+\_\+C}{M_i_s_C}}]{\setlength{\rightskip}{0pt plus 5cm}double M\+\_\+i\+\_\+s\+\_\+C\mbox{[}27\mbox{]}}\hypertarget{fixed__RU__analytical__model_8c_a12c6d1b6895c6cbcc8fd6992c7fbe3ff}{}\label{fixed__RU__analytical__model_8c_a12c6d1b6895c6cbcc8fd6992c7fbe3ff}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!n@{n}}
+\index{n@{n}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{n}{n}}]{\setlength{\rightskip}{0pt plus 5cm}int n}\hypertarget{fixed__RU__analytical__model_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{}\label{fixed__RU__analytical__model_8c_a76f11d9a0a47b94f72c2d0e77fb32240}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!O\+CW@{O\+CW}}
+\index{O\+CW@{O\+CW}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{O\+CW}{OCW}}]{\setlength{\rightskip}{0pt plus 5cm}int O\+CW\mbox{[}6\mbox{]}}\hypertarget{fixed__RU__analytical__model_8c_af115fd85849d5da7300072515be18a69}{}\label{fixed__RU__analytical__model_8c_af115fd85849d5da7300072515be18a69}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!R@{R}}
+\index{R@{R}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{R}{R}}]{\setlength{\rightskip}{0pt plus 5cm}int R = 15}\hypertarget{fixed__RU__analytical__model_8c_a3d90133d3051fbc4816d02efd9566d8e}{}\label{fixed__RU__analytical__model_8c_a3d90133d3051fbc4816d02efd9566d8e}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!R\+A\+\_\+\+RU@{R\+A\+\_\+\+RU}}
+\index{R\+A\+\_\+\+RU@{R\+A\+\_\+\+RU}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{R\+A\+\_\+\+RU}{RA_RU}}]{\setlength{\rightskip}{0pt plus 5cm}float R\+A\+\_\+\+RU = 15.\+0}\hypertarget{fixed__RU__analytical__model_8c_a3ebded876cc18042b8855cd4c27c00ae}{}\label{fixed__RU__analytical__model_8c_a3ebded876cc18042b8855cd4c27c00ae}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!sta@{sta}}
+\index{sta@{sta}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{sta}{sta}}]{\setlength{\rightskip}{0pt plus 5cm}int sta = 50}\hypertarget{fixed__RU__analytical__model_8c_ab2cb8ab426f06c27553b10c73a4f795c}{}\label{fixed__RU__analytical__model_8c_ab2cb8ab426f06c27553b10c73a4f795c}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!success\+\_\+probability@{success\+\_\+probability}}
+\index{success\+\_\+probability@{success\+\_\+probability}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{success\+\_\+probability}{success_probability}}]{\setlength{\rightskip}{0pt plus 5cm}double success\+\_\+probability}\hypertarget{fixed__RU__analytical__model_8c_a621ed640a0caba2d42ecb9b7d376b3f0}{}\label{fixed__RU__analytical__model_8c_a621ed640a0caba2d42ecb9b7d376b3f0}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!success\+\_\+sta@{success\+\_\+sta}}
+\index{success\+\_\+sta@{success\+\_\+sta}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{success\+\_\+sta}{success_sta}}]{\setlength{\rightskip}{0pt plus 5cm}double success\+\_\+sta}\hypertarget{fixed__RU__analytical__model_8c_a345c2951b3e156ffc738e0de807642b4}{}\label{fixed__RU__analytical__model_8c_a345c2951b3e156ffc738e0de807642b4}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!total\+\_\+cdf@{total\+\_\+cdf}}
+\index{total\+\_\+cdf@{total\+\_\+cdf}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+cdf}{total_cdf}}]{\setlength{\rightskip}{0pt plus 5cm}double total\+\_\+cdf}\hypertarget{fixed__RU__analytical__model_8c_af1cb1a10f88721b26875206ca5f93b92}{}\label{fixed__RU__analytical__model_8c_af1cb1a10f88721b26875206ca5f93b92}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!total\+\_\+collision\+\_\+\+RU@{total\+\_\+collision\+\_\+\+RU}}
+\index{total\+\_\+collision\+\_\+\+RU@{total\+\_\+collision\+\_\+\+RU}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+collision\+\_\+\+RU}{total_collision_RU}}]{\setlength{\rightskip}{0pt plus 5cm}double total\+\_\+collision\+\_\+\+RU}\hypertarget{fixed__RU__analytical__model_8c_ad87aa5050f05d2573e187a6189e92e3d}{}\label{fixed__RU__analytical__model_8c_ad87aa5050f05d2573e187a6189e92e3d}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!total\+\_\+utilization@{total\+\_\+utilization}}
+\index{total\+\_\+utilization@{total\+\_\+utilization}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+utilization}{total_utilization}}]{\setlength{\rightskip}{0pt plus 5cm}double total\+\_\+utilization}\hypertarget{fixed__RU__analytical__model_8c_acf226c3950cefa8d84ce63f84dd29928}{}\label{fixed__RU__analytical__model_8c_acf226c3950cefa8d84ce63f84dd29928}
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!T\+X\+OP@{T\+X\+OP}}
+\index{T\+X\+OP@{T\+X\+OP}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{T\+X\+OP}{TXOP}}]{\setlength{\rightskip}{0pt plus 5cm}double T\+X\+OP = 5.\+681}\hypertarget{fixed__RU__analytical__model_8c_a895acb289ea3b6df866ac51e4498df09}{}\label{fixed__RU__analytical__model_8c_a895acb289ea3b6df866ac51e4498df09}
+
+
+Referenced by station\+\_\+number().
+
+\index{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}!utilization@{utilization}}
+\index{utilization@{utilization}!fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c@{fixed\+\_\+\+R\+U\+\_\+analytical\+\_\+model.\+c}}
+\subsubsection[{\texorpdfstring{utilization}{utilization}}]{\setlength{\rightskip}{0pt plus 5cm}double utilization}\hypertarget{fixed__RU__analytical__model_8c_aaeec171fb246a7d88e1f2f54f7ddab80}{}\label{fixed__RU__analytical__model_8c_aaeec171fb246a7d88e1f2f54f7ddab80}
+
+
+Referenced by station\+\_\+number().
+
